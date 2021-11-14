@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.0.0.js"></script>
+    <script src="../Scripts/umd/popper.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+    <title>Niki's Coding School</title>
+</head>
+<body>
+    <!-- Header -->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="../Index.html#hero"><h1>Niki's <span>Coding School</span></h1></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="../Index.html#hero" data-after="Home">Home</a></li>
+                        <li><a href="../Index.html#courses" data-after="Courses">Courses</a></li>
+                        <li><a href="../Index.html#trainers" data-after="Trainers">Trainers</a></li>
+                        <li><a href="../Index.html#students" data-after="Students">Students</a></li>
+                        <li><a href="../Index.html#assignments" data-after="Assignments">Assignments</a></li>
+                        <li>
+                            <a class="nav-link dropdown-toggle" href="#assign-per-course" id="navbardrop" data-toggle="dropdown" data-after="Options">Options</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Index.html#trainer-course"data-after="Trainers Per Course">Trainers Per Course</a>
+                                <a class="dropdown-item" href="../Index.html#assign-course" data-after="Assignments Per Course">Assignments Per Course</a>
+                                <a class="dropdown-item" href="../Index.html#student-course" data-after="Students Per Course">Students Per Course</a>
+                                <a class="dropdown-item" href="../Index.html#ass-stu-course"data-after="Assignments/Students/Course">Assignments/Students/Course</a>
+                                <a class="dropdown-item" href="../Index.html#about" data-after="About">About</a>
+                                <a class="dropdown-item" href="../Index.html#contact" data-after="Contact">Contact</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- EndHeader -->
+    <!--Add data-->
+    <section id="add-course">
+        <div class="service-top">
+            <h2 class="section-title">Add <span><strong>Course</strong></span></h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="../Index.html#courses">
+                    <div class="row m-3">
+                        <label for="course-title">Title</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="course-title" list="listCourses" type="text" name="course-title" maxlength="20" value="" placeholder="Add a programming language (max 20 chars)*" required />
+                        <datalist id="listCourses">
+                            <option value="C#"/>
+                            <option value="C++" />
+                            <option value="Ruby" />
+                            <option value="Java" />
+                            <option value="Python" />
+                        </datalist>
+                    </div>
+                    <div class="row m-3">
+                        <label for="course-str">Stream</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="course-str" list="listCB" type="text" maxlength="5" name="course-str" value="" pattern="(cb|CB)-[8-9]|(cb|CB)-1([0-6])" placeholder="You must choose from CB-8 to CB-16*" oninvalid="this.setCustomValidity('Format must be (CB-8 to CB-16)')" oninput="setCustomValidity('')" />
+                        <datalist id="listCB">
+                            <option value="CB-9" />
+                            <option value="CB-10" />
+                            <option value="CB-11" />
+                            <option value="CB-12" />
+                            <option value="CB-13" />
+                            <option value="CB-14" />
+                            <option value="CB-15" />
+                            <option value="CB-16" />
+                        </datalist>
+                    </div>
+                    <div class="row m-3">
+                        <label for="course-type">Type</label>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="course-type" name="course-type" required />
+                        <option selected value="PT">Part Time</option>
+                        <option value="FT">Full Time</option>
+                        </select>
+                    </div>
+                    <div class="row m-3">
+                        <label for="course-sdate">Start Date (from 01-01-2018 to 01-01-2030)</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="course-sdate" type="date" min="2018-01-01" max="2030-11-11" name="course-sdate" value="" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="course-edate">End Date (3 or 6 months after Start Date Depending On Type)</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="course-edate" type="date" min="2018-04-01" max="2030-11-11" name="course-edate" value="" required />
+                    </div>
+                    <div>
+                        <input class="form-control btn btn-dark" type="submit" value="Add a Course" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control btn btn-dark" type="reset" value="Clear" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="add-trainer">
+        <div class="service-top">
+            <h2 class="section-title">Add <span><strong>Trainer</strong></span></h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="../Index.html#trainers">
+                    <div class="row m-3">
+                        <label for="trainer-fname">First Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="trainer-fname" type="text" name="trainer-fname" maxlength="20" pattern="[a-z,A-Z]+" value="" placeholder="Latin chacters, no space (max 20 chars)*" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="trainer-lname">Last Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="trainer-lname" type="text" name="trainer-lname" maxlength="30" pattern="[a-z,A-Z]+" value="" placeholder="Latin chacters, no space (max 30 chars)*" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" list="subjects" id="subject" type="text" maxlength="20" name="subject" placeholder="Insert any character (max 30 chars)*" value="" required />
+                        <datalist id="subjects">
+                            <option value="C#" />
+                            <option value="C++" />
+                            <option value="Ruby" />
+                            <option value="Java" />
+                            <option value="Python" />
+                        </datalist>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control btn btn-dark" type="submit" value="Add a Τrainer" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control btn btn-dark" type="reset" value="Clear" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="add-student">
+        <div class="service-top">
+            <h2 class="section-title">Add <span><strong>Student</strong></span></h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="../Index.html#students">
+                    <div class="row m-3">
+                        <label for="student-fname">First Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="student-fname" type="text" name="student-fname" maxlength="20" pattern="[a-z,A-Z]+" value="" placeholder="Latin chacters, no space (max 20 chars)*" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="student-lname">Last Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="student-lname" type="text" name="student-lname" maxlength="30" pattern="[a-z,A-Z]+" value="" placeholder="Latin chacters, no space (max 30 chars)*" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="stu-birth">Date of Birth</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="stu-birth" type="date" min="1945-01-01" max="2005-01-01" name="stu-birth" value="" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="stu-birthtown">Place of Birth</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="stu-birthtown" type="text" maxlength="20" pattern="[a-z,A-Z]+" name="stu-birthtown" placeholder="Latin chacters (max 20 chars)*" value="" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="stu-fees">Tuition Fees</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="stu-fees" type="number" min="0" max="10000" name="stu-fees" placeholder="Insert amount from 0 to 10000 euro*" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control btn btn-dark" type="submit" value="Add a Student" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control btn btn-dark" type="reset" value="Clear" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="add-assign">
+        <div class="service-top">
+            <h2 class="section-title">Add <span><strong>Assignment</strong></span></h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="../Index.html#assignments">
+                    <div class="row m-3">
+                        <label for="assign-title">Title</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="assign-title" type="text" name="assign-title" maxlength="30" pattern="[a-z,A-Z]+" value="" placeholder="Insert any character (max 30 chars)*" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="assign-des">Description</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="assign-des" type="text" name="assign-des" maxlength="60" pattern="[a-z,A-Z]+" value="" placeholder="Insert any character (max 60 chars)*" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="assign-date">Date of Submission (from 01-01-2018 until 01-01-2030)</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="assign-date" type="date" min="2018-01-01" max="2030-01-01" name="assign-date" value="" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="assign-om">Oral Mark</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="assign-om" type="number" min="0" max="100" name="assign-om" value="" placeholder="Insert a number from 0 to 100*" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="assign-tm">Total Mark</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="assign-tm" type="number" min="0" max="100" name="assign-tm" value="" placeholder="Insert a number from 0 to 100*" required />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control btn btn-dark" type="submit" value="Add an Assignment" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control btn btn-dark" type="reset" value="Clear" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="add-trpcourse">    
+        <div class="service-top">
+            <h2 class="section-title">Add <span><strong>Trainers Per Course</strong></span></h2>
+        </div>
+            <div class="row">
+                <div class="col">
+                    <form action="../Index.html#trainer-course">
+                        <div class="row m-3">
+                            <label for="assign-title"><h2>Courses</h2></label>
+                        </div>
+                            <div class="text-left col m-3">
+                                <select class="row m-3" id="courseslist" name="courses" required>
+                                    <option value="C#">C#</option>
+                                    <option value="C++">C++</option>
+                                    <option value="Java">Java</option>
+                                    <option value="Ruby">Ruby</option>
+                                    <option value="Python">Python</option>
+                                </select>
+                            </div>
+                            <div class="row m-3">
+                                <label for="assign-title"><h2>Trainers</h2></label>
+                                <div class="center text-left col m-3">
+                                    <div class="checkbox">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="trainers" value="Periklis Themistokleous" >Periklis Themistokleous</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <label><input class="sm-col text-right m-4" type="checkbox"name="trainers" value="Makis Makopoulos">Makis Makopoulos</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="trainers" value="Hector Gkatsos">Hector Gkatsos</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="trainers" value="Babis Papacharalabous">Babis Papacharalabous</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="trainers" value="Eliza Theofikaktidou">Eliza Theofikaktidou</label>
+                                      </div>
+                                    </div>    
+                            </div>
+                    <div class="form-group">
+                        <input class="btn btn-dark btn-lg" type="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="add-stcourse">    
+        <div class="service-top">
+            <h2 class="section-title">Add <span><strong>Students Per Course</strong></span></h2>
+        </div>
+            <div class="row">
+                <div class="col">
+                    <form action="../Index.html#student-course">
+                        <div class="row m-3">
+                            <label for="assign-title"><h2>Courses</h2></label>
+                        </div>
+                            <div class="text-left col m-3">
+                                <select class="row m-3" id="courseslist" name="courses" required>
+                                    <option value="C#">C#</option>
+                                    <option value="C++">C++</option>
+                                    <option value="Java">Java</option>
+                                    <option value="Ruby">Ruby</option>
+                                    <option value="Python">Python</option>
+                                </select>
+                            </div>
+                            <div class="row m-3">
+                                <label for="assign-title"><h2>Students</h2></label>
+                                <div class="center text-left col m-3">                                 <!--De mporw na valw validations xwris JS?-->
+                                    <div class="checkbox">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Stelios Mitsaras">Stelios Mitsaras</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <label><input class="sm-col text-right m-4" type="checkbox" name="students" value="Niki Theoharous">Niki Theoharous</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Chistoforos Kolomvos">Chistoforos Kolomvos</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Evaggelos Giannopoulos">Evaggelos Giannopoulos</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Apostolos Perikleous">Apostolos Perikleous</label>
+                                      </div>
+                                    </div>    
+                            </div>
+                    <div class="form-group">
+                        <input class="btn btn-dark btn-lg" type="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="add-asscourse">    
+        <div class="service-top">
+            <h2 class="section-title">Add <span><strong>Assignments Per Course</strong></span></h2>
+        </div>
+            <div class="row">
+                <div class="col">
+                    <form action="../Index.html#assign-course">
+                        <div class="row m-3">
+                            <label for="assign-title"><h2>Courses</h2></label>
+                        </div>
+                            <div class="text-left col m-3">
+                                <select class="row m-3" id="courseslist" name="courses" required>
+                                    <option value="C#">C#</option>
+                                    <option value="C++">C++</option>
+                                    <option value="Java">Java</option>
+                                    <option value="Ruby">Ruby</option>
+                                    <option value="Python">Python</option>
+                                </select>
+                            </div>
+                            <div class="row m-3">
+                                <label for="assign-title"><h2>Assignments</h2></label>
+                                <div class="center text-left col m-3">                                 <!--De mporw na valw validations xwris JS?-->
+                                    <div class="checkbox">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Build A Website">Build A Website</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <label><input class="sm-col text-right m-4" type="checkbox" name="assignments" value="Even or Odd?">Even or Odd?</label>
+                                      </div>
+                                      <div class="checkbox disabled">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Multiply">Multiply</label>
+                                      </div>
+                                      <div class="checkbox disabled">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Decode the Morse code">Decode the Morse code</label>
+                                      </div>
+                                      <div class="checkbox disabled">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Sum of positive">Sum of positive</label>
+                                      </div>
+                                    </div>    
+                            </div>
+                    <div class="form-group">
+                        <input class="btn btn-dark btn-lg" type="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="add-asstucourse">
+        <div class="service-top">
+            <h2 class="section-title">Add <span><strong>Αssignments Per Student Per Course</strong></span></h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="../Index.html#ass-stu-course">
+                    <div class="row m-3">
+                        <label for="course-title">Title</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="course-title" list="listCourses" type="text" name="course-title" maxlength="20" value="" placeholder="Add a programming language (max 20 chars)*" required />
+                        <datalist id="listCourses">
+                            <option value="C#"/>
+                            <option value="C++" />
+                            <option value="Ruby" />
+                            <option value="Java" />
+                            <option value="Python" />
+                        </datalist>
+                    </div>
+                    <div class="row m-3">
+                        <label for="course-str">Stream</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="course-str" list="listCB" type="text" maxlength="5" name="course-str" value="" pattern="(cb|CB)-[8-9]|(cb|CB)-1([0-6])" placeholder="You must choose from CB-8 to CB-16*" required="" oninvalid="this.setCustomValidity('Format must be (CB-8 to CB-16)')" oninput="setCustomValidity('')" />
+                        <datalist id="listCB">
+                            <option value="CB-9" />
+                            <option value="CB-10" />
+                            <option value="CB-11" />
+                            <option value="CB-12" />
+                            <option value="CB-13" />
+                            <option value="CB-14" />
+                            <option value="CB-15" />
+                            <option value="CB-16" />
+                        </datalist>
+                    </div>
+                    <div class="row m-3">
+                        <label for="course-type">Type</label>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="course-type" name="course-type" required />
+                        <option selected value="PT">Part Time</option>
+                        <option value="FT">Full Time</option>
+                        </select>
+                    </div>
+                    <div class="row m-3">
+                        <label for="course-sdate">Start Date (from 01-01-2018 to 01-01-2030)</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="course-sdate" type="date" min="2018-01-01" max="2030-11-11" name="course-sdate" value="" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="course-edate">End Date (3 or 6 months after Start Date Depending On Type)</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="course-edate" type="date" min="2018-04-01" max="2030-11-11" name="course-edate" value="" required />
+                    </div>
+                    <div class="row m-3">
+                        <label for="assign-title"><h2>Assignments</h2></label>
+                        <div class="center text-left col m-3">                                 
+                            <div class="checkbox">
+                                <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Build A Website">Build A Website</label>
+                              </div>
+                              <div class="checkbox">
+                                <label><input class="sm-col text-right m-4" type="checkbox" name="assignments" value="Even or Odd?">Even or Odd?</label>
+                              </div>
+                              <div class="checkbox disabled">
+                                <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Multiply">Multiply</label>
+                              </div>
+                              <div class="checkbox disabled">
+                                <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Decode the Morse code">Decode the Morse code</label>
+                              </div>
+                              <div class="checkbox disabled">
+                                <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Sum of positive">Sum of positive</label>
+                              </div>
+                            </div>    
+                    </div>
+                    <div class="row m-3">
+                        <label for="assign-title"><h2>Students</h2></label>
+                        <div class="center text-left col m-3">                                 
+                            <div class="checkbox">
+                                <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Stelios Mitsaras">Stelios Mitsaras</label>
+                              </div>
+                              <div class="checkbox">
+                                <label><input class="sm-col text-right m-4" type="checkbox" name="students" value="Niki Theoharous">Niki Theoharous</label>
+                              </div>
+                              <div class="checkbox disabled">
+                                <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Chistoforos Kolomvos">Chistoforos Kolomvos</label>
+                              </div>
+                              <div class="checkbox disabled">
+                                <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Evaggelos Giannopoulos">Evaggelos Giannopoulos</label>
+                              </div>
+                              <div class="checkbox disabled">
+                                <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Apostolos Perikleous">Apostolos Perikleous</label>
+                              </div>
+                            </div>    
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-dark btn-lg" type="submit" value="Submit" />
+                    </div>    
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="pair-asstucourse">    
+        <div class="service-top">
+            <h2 class="section-title">Pair <span><strong>Assignments Per Student Per Course</strong></span></h2>
+        </div>
+            <div class="row">
+                <div class="col">
+                    <form action="../Index.html#hero">
+                        <div class="row m-3">
+                            <label for="assign-title"><h2>Courses</h2></label>
+                        </div>
+                            <div class="text-left col m-3">
+                                <select class="row m-3" id="courseslist" name="courses" required>
+                                    <option value="C#">C#</option>
+                                    <option value="C++">C++</option>
+                                    <option value="Java">Java</option>
+                                    <option value="Ruby">Ruby</option>
+                                    <option value="Python">Python</option>
+                                </select>
+                            </div>
+                            <div class="row m-3">
+                                <label for="assign-title"><h2>Assignments</h2></label>
+                                <div class="center text-left col m-3">                                 
+                                    <div class="checkbox">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Build A Website">Build A Website</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <label><input class="sm-col text-right m-4" type="checkbox" name="assignments" value="Even or Odd?">Even or Odd?</label>
+                                      </div>
+                                      <div class="checkbox disabled">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Multiply">Multiply</label>
+                                      </div>
+                                      <div class="checkbox disabled">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Decode the Morse code">Decode the Morse code</label>
+                                      </div>
+                                      <div class="checkbox disabled">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="assignments" value="Sum of positive">Sum of positive</label>
+                                      </div>
+                                    </div>    
+                            </div>
+                            <div class="row m-3">
+                                <label for="assign-title"><h2>Students</h2></label>
+                                <div class="center text-left col m-3">                                 
+                                    <div class="checkbox">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Stelios Mitsaras">Stelios Mitsaras</label>
+                                      </div>
+                                      <div class="checkbox">
+                                        <label><input class="sm-col text-right m-4" type="checkbox" name="students" value="Niki Theoharous">Niki Theoharous</label>
+                                      </div>
+                                      <div class="checkbox disabled">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Chistoforos Kolomvos">Chistoforos Kolomvos</label>
+                                      </div>
+                                      <div class="checkbox disabled">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Evaggelos Giannopoulos">Evaggelos Giannopoulos</label>
+                                      </div>
+                                      <div class="checkbox disabled">
+                                        <label><input class="sm-col text-left m-4" type="checkbox" name="students" value="Apostolos Perikleous">Apostolos Perikleous</label>
+                                      </div>
+                                    </div>    
+                            </div>
+                    <div class="form-group">
+                        <input class="btn btn-dark btn-lg" type="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--End Add Data-->
+    <!--About Section-->
+    <section id="about">
+        <div class="about container">
+            <div class="col-left">
+                <div class="about-img">
+                    <img src="../Assets/me.jpg" alt="image of Niki">
+                </div>
+            </div>
+            <div class="col-right">
+                <h1 class="section-title">About <span>Niki's Coding School</span></h1>
+                <h2>Our Goals</h2>
+                <p>
+                    Hi, my name is Niki and me and my team created a school that will help students learn how to code.
+                    Our goal is to create a helpful and happy environment where our students can floorish.
+                    With our top-educated trainers and the high-end technological supplies we invite you to join us in our vision
+                    <h3>Let's create a better coding world!</h3>
+                </p>
+                <a href="Index.html#hero" class="cta">Download Resume</a>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact container">
+            <div><h1 class="section-title">Contact <span>Info</span></h1></div>
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/ultraviolet/40/000000/phone.png" alt="phone image" /></div>
+                    <div class="contact-info">
+                        <h1>Phone</h1>
+                        <h2>+1 234 123 1234</h2>
+                        <h2>+1 234 123 1234</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/external-itim2101-blue-itim2101/64/000000/external-email-digital-marketing-itim2101-blue-itim2101.png" alt="email image" /></div>
+                    <div class="contact-info">
+                        <h1>Email</h1>
+                        <h2>nikiscodingschool@gmail.com</h2>
+                        <h2>abcd@gmail.com</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/ultraviolet/40/000000/address.png" alt="phone image" /></div>
+                    <div class="contact-info">
+                        <h1>Address</h1>
+                        <h2>Athens</h2>
+                        <h2>Athens</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+    <!-- Footer -->
+    <section id="footer">
+        <div class="footer container">
+            <div class="brand"><h1><span>N</span>iki's <span>C</span>oding <span>School</span></h1></div>
+            <h2>Become A Coder Now</h2>
+            <div class="social-icon">
+                <div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/office/16/000000/facebook-new.png" alt="Facebook logo" /></a>
+                </div>
+                <!--<div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/ultraviolet/40/000000/instagram-new.png" alt="Instagram logo" /></a>
+                </div>-->
+                <div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/officel/16/000000/twitter.png" alt="Twitter logo" /></a>
+                </div>
+            </div>
+            <p>Copyright © 2021 "Niki's Coding School". All rights reserved</p>
+        </div>
+    </section>
+    <!-- End Footer -->
+    <script src="../Scripts/app.js"></script>
+</body>
+</html>

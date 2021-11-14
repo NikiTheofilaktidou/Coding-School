@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.0.0.js"></script>
+    <script src="../Scripts/umd/popper.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+    
+    <title>Niki's Coding School</title>
+</head>
+<body>
+    <!-- Header -->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="Index.html#hero"><h1>Niki's <span>Coding School</span></h1></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="Index.html#hero" data-after="Home">Home</a></li>
+                        <li><a href="Index.html#courses" data-after="Courses">Courses</a></li>
+                        <li><a href="Index.html#trainers" data-after="Trainers">Trainers</a></li>
+                        <li><a href="Index.html#students" data-after="Students">Students</a></li>
+                        <li><a href="Index.html#assignments" data-after="Assignments">Assignments</a></li>
+                        <li>
+                            <a class="nav-link dropdown-toggle" href="Index.html#trainer-course" id="navbardrop" data-toggle="dropdown" data-after="Options">Options</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Index.html#trainer-course"data-after="Trainers Per Course">Trainers Per Course</a>
+                                <a class="dropdown-item" href="Index.html#assign-course" data-after="Assignments Per Course">Assignments Per Course</a>
+                                <a class="dropdown-item" href="Index.html#student-course" data-after="Students Per Course">Students Per Course</a>
+                                <a class="dropdown-item" href="Index.html#ass-stu-course"data-after="Assignments/Students/Course">Assignments/Students/Course</a>
+                                <a class="dropdown-item" href="Index.html#about" data-after="About">About</a>
+                                <a class="dropdown-item" href="Index.html#contact" data-after="Contact">Contact</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- EndHeader -->
+    <!--Hero Section-->
+    <section id="hero">
+        <div class="hero container">
+            <div>
+                <h1>Welcome,<span></span></h1>
+                <h1>To Niki's<span></span></h1>
+                <h1>Coding School<span></span></h1>
+                <a href="Index.html#courses" type="button" class="cta">Start Here!</a>
+            </div>
+        </div>
+    </section>
+    <!--End Hero Section-->
+    <!--Courses Section-->
+    <section id="courses">
+        <div class="service-top">
+            <h1 class="section-title">c<span><strong>o</strong></span>urses</h1>
+            <p>
+                You can edit and add courses here.
+            </p>
+        </div>
+        <div class="add-button">
+            <div class="row mt-5 mb-0">
+                <div class="col">
+                    <a class="btn btn-light" href="HTML/Add Data.html#add-course"><h4>Add a Course</h4></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Stream</th>
+                            <th>Type</th>
+                            <th>Start date</th>
+                            <th>End date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>C++</td>
+                            <td>CB-7</td>
+                            <td>Full Time</td>
+                            <td>04/05/2019</td>
+                            <td>04/08/2019</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-course">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>CB-8</td>
+                            <td>Part Time</td>
+                            <td>03/02/2020</td>
+                            <td>03/08/2020</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-course">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>CB-9</td>
+                            <td>Part Time</td>
+                            <td>05/06/2020</td>
+                            <td>05/12/2020</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-course">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C#</td>
+                            <td>CB-10</td>
+                            <td>Full Time</td>
+                            <td>05/06/2020</td>
+                            <td>05/09/2020</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-course">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ruby</td>
+                            <td>CB-11</td>
+                            <td>Part Time</td>
+                            <td>10/02/2021</td>
+                            <td>10/08/2021</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-course">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!--End Courses Section-->
+    <!--Trainers Section-->
+    <section id="trainers">
+        <div class="service-top">
+            <h1 class="section-title">Tr<span><strong>A</strong></span>iners</h1>
+            <p>
+                You can edit and add trainers here.
+            </p>
+        </div>
+        <div class="add-button">
+            <div class="row mt-5 mb-0">
+                <div class="col">
+                    <a class="btn btn-dark" href="HTML/Add Data.html#add-trainer"><h4>Add a Trainer</h4></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-light table-hover">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Subject</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hector</td>
+                            <td>Gkatsios</td>
+                            <td>C#</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-trainer">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Periklis</td>
+                            <td>Themistokleous</td>
+                            <td>Ruby</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-trainer">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Eliza</td>
+                            <td>Theofilaktidou</td>
+                            <td>Python</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-trainer">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Makis</td>
+                            <td>Makopoulos</td>
+                            <td>Java</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-trainer">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <td>Babis</td>
+                            <td>Papacharalabous</td>
+                            <td>C++</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-trainer">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!--End Trainers Section-->
+    <!--Students Section-->
+    <section id="students">
+        <div class="service-top">
+            <h1 class="section-title"><span><strong>S</strong></span>tudents</h1>
+            <p>
+                You can edit and add students here.
+            </p>
+        </div>
+        <div class="add-button">
+            <div class="row mt-5 mb-0">
+                <div class="col">
+                    <a class="btn btn-light" href="HTML/Add Data.html#add-student"><h4>Add a Student</h4></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Date of Birth</th>
+                            <th>Tuition Fees</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Niki</td>
+                            <td>Theoharous</td>
+                            <td>10-06-1988</td>
+                            <td>5000</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-student">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Evaggelos</td>
+                            <td>Giannopoulos</td>
+                            <td>23-01-1985</td>
+                            <td>6000</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-student">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Apostolos</td>
+                            <td>Perikleous</td>
+                            <td>11-01-2000</td>
+                            <td>6000</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-student">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Stelios</td>
+                            <td>Mitsaras</td>
+                            <td>05-06-1988</td>
+                            <td>5000</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-student">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Christoforos</td>
+                            <td>Kolomvos</td>
+                            <td>10-06-1985</td>
+                            <td>8000</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-student">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!--End Students Section-->
+    <!--Assignments Section-->
+    <section id="assignments">
+        <div class="service-top">
+            <h1 class="section-title">Ass<span><strong>i</strong></span>gnments</h1>
+            <p>
+                You can edit and add assignments here.
+            </p>
+        </div>
+        <div class="add-button">
+            <div class="row mt-5 mb-0">
+                <div class="col">
+                    <a class="btn btn-dark" href="HTML/Add Data.html#add-assign"><h4>Add an Assignment</h4></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-light table-hover">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Date of Submission</th>
+                            <th>Oral Mark</th>
+                            <th>Total Mark</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Build A Website</td>
+                            <td>Build a website using HTML5 and CSS</td>
+                            <td>20-4-2021</td>
+                            <td>60</td>
+                            <td>77</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-assign">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Even or Odd?</td>
+                            <td>Create a function that gets a number and returns even or odd</td>
+                            <td>10-8-2021</td>
+                            <td>70</td>
+                            <td>67</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-assign">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Multiply</td>
+                            <td>Create a function that multiplies two numbers returning the result</td>
+                            <td>11-10-2021</td>
+                            <td>86</td>
+                            <td>80</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-assign">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Decode the Morse code</td>
+                            <td>Write a simple Morse code decoder</td>
+                            <td>12-10-2021</td>
+                            <td>76</td>
+                            <td>33</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-assign">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sum of positive</td>
+                            <td>Return the sum of all of the positive numbers of an array.</td>
+                            <td>03-11-2021</td>
+                            <td>75</td>
+                            <td>70</td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-assign">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!--End Assignments Section-->
+    <!--Trainers Per Course Section-->
+    <section id="trainer-course">
+        <div class="service-top">
+            <h1 class="section-title">Trainers<span><strong> per</strong></span> Course</h1>
+            <p>
+                You can edit or add trainers per course here.
+            </p>
+        </div>
+        <div class="add-button">
+            <div class="row mt-5 mb-0">
+                <div class="col">
+                    <a class="btn btn-light" href="HTML/Add Data.html#add-trpcourse"><h4>Add Trainers Per Course</h4></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Stream</th>
+                            <th>Type</th>
+                            <th>Trainers</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>C#</td>
+                            <td>CB-7</td>
+                            <td>Part Time</td>
+                            <td>Hector Gkatsios <br/>
+                                Eliza Theofilaktidou<br/>
+                                Makis Makopoulos<br/>
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-trpcourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>CB-8</td>
+                            <td>Part Time</td>
+                            <td>
+                                Periklis Themistokleous<br />
+                                Makis Makopoulos
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-trpcourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>CB-9</td>
+                            <td>Part Time</td>
+                            <td>
+                                Hector Gkatsios<br/>
+                                Babis Papacharalabous
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-trpcourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C++</td>
+                            <td>CB-10</td>
+                            <td>Full Time</td>
+                            <td>
+                                Eliza Theofilaktidou<br />
+                                Babis Papacharalabous
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-trpcourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ruby</td>
+                            <td>CB-11</td>
+                            <td>Part Time</td>
+                            <td>
+                                Makis Makopoulos<br/>
+                                Hector Gkatsios
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-trpcourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!--End Trainers Per Course Section-->
+    <!--Add Students/Course Section-->
+    <section id="student-course">
+        <div class="service-top">
+            <h1 class="section-title">Students<span><strong> per</strong></span> Course</h1>
+            <p>
+                You can edit or add students per course here.
+            </p>
+        </div>
+        <div class="add-button">
+            <div class="row mt-5 mb-0">
+                <div class="col">
+                    <a class="btn btn-light" href="HTML/Add Data.html#add-stcourse"><h4>Add Students Per Course</h4></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Stream</th>
+                            <th>Type</th>
+                            <th>Students</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>C#</td>
+                            <td>CB-7</td>
+                            <td>Part Time</td>
+                            <td>
+                                Niki Theoharous <br />
+                                Apostolos Perikleous<br />
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-stcourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>CB-8</td>
+                            <td>Part Time</td>
+                            <td>
+                                Chistoforos Kolomvos<br />
+                                Evaggelos Giannopoulos<br />
+                                Apostolos Perikleous
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-stcourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>CB-9</td>
+                            <td>Part Time</td>
+                            <td>
+                                Evaggelos Giannopoulos<br />
+                                Stelios Mitsaras
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-stcourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C++</td>
+                            <td>CB-10</td>
+                            <td>Full Time</td>
+                            <td>
+                                Apostolos Perikleous<br />
+                                Niki Theoharous<br />
+                                Stelios Mitsaras
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-stcourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ruby</td>
+                            <td>CB-11</td>
+                            <td>Part Time</td>
+                            <td>
+                                Apostolos Perikleous<br />
+                                Stelios Mitsaras
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-stcourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!--End Add Students/Course Section-->
+    <!--Add Assignments/Course Section-->
+    <section id="assign-course">
+        <div class="service-top">
+            <h1 class="section-title">Assignments <span><strong>Per</strong></span> Course</h1>
+            <p>
+                You can edit or add assignments per course here.
+            </p>
+        </div>
+        <div class="add-button">
+            <div class="row mt-5 mb-0">
+                <div class="col">
+                    <a class="btn btn-dark" href="HTML/Add Data.html#add-asscourse"><h4>Add Assignments Per Course</h4></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-light table-hover">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Stream</th>
+                            <th>Type</th>
+                            <th>Assignment</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>C#</td>
+                            <td>CB-7</td>
+                            <td>Full Time</td>
+                            <td>
+                                Multiply<br />
+                                Decode the Morse code
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-asscourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>CB-8</td>
+                            <td>Part Time</td>
+                            <td>
+                                Build A Website<br />
+                                Even or Odd?
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-asscourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>CB-9</td>
+                            <td>Part Time</td>
+                            <td>
+                                Sum of positive<br />
+                                Even or Odd?<br />
+                                Multiply
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-asscourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C++</td>
+                            <td>CB-10</td>
+                            <td>Full Time</td>
+                            <td>
+                                Sum of positive<br />
+                                Decode the Morse code
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-asscourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ruby</td>
+                            <td>CB-11</td>
+                            <td>Part Time</td>
+                            <td>
+                                Build A Website<br />
+                                Decode the Morse code
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-asscourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!--End Assignments/Course Section-->
+    <!--Add Assignments/Student per Course Section-->
+    <section id="ass-stu-course">
+        <div class="service-top">
+            <h1 class="section-title">Assignments <span><strong>Per</strong></span> Student <span><strong>Per</strong></span> Course</h1>
+            <p>
+                You can edit or add assignments per student per course here.
+            </p>
+        </div>
+        <div class="add-button">
+            <div class="row mt-5 mb-0">
+                <div class="col-left">
+                    <a class="btn btn-dark" href="HTML/Add Data.html#pair-asstucourse"><h4>Pair Course with Assignments And Students</h4></a>
+                </div>
+                <span>♠</span>
+                <div class="col-left">
+                    <a class="btn btn-dark" href="HTML/Add Data.html#add-asstucourse"><h4>Add Assignments per Students per Course</h4></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-light table-hover">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Stream</th>
+                            <th>Type</th>
+                            <th>Assignment</th>
+                            <th>Students</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>C#</td>
+                            <td>CB-7</td>
+                            <td>Part Time</td>
+                            <td>
+                                Multiply<br />
+                                Decode the Morse code
+                            </td>
+                            <th>
+                                Apostolos Perikleous<br />
+                                Stelios Mitsaras<br />
+                                Chistoforos Kolomvos
+                            </th>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-asstucourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>CB-8</td>
+                            <td>Part Time</td>
+                            <td>
+                                Build A Website<br />
+                                Even or Odd?
+                            </td>
+                            <td>
+                                Niki Theoharous<br/>
+                                Evaggelos Giannopoulos<br />
+                                Apostolos Perikleous<br />
+                                Stelios Mitsaras
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-asstucourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>CB-9</td>
+                            <td>Part Time</td>
+                            <td>
+                                Sum of positive<br />
+                                Even or Odd?<br />
+                                Multiply
+                            </td>
+                            <td>
+                                Niki Theoharous<br />
+                                Apostolos Perikleous<br />
+                                Stelios Mitsaras<br />
+                                Chistoforos Kolomvos
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-asstucourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C++</td>
+                            <td>CB-10</td>
+                            <td>Full Time</td>
+                            <td>
+                                Sum of positive<br />
+                                Decode the Morse code
+                            </td>
+                            <td>
+                                Apostolos Perikleous<br />
+                                Stelios Mitsaras<br />
+                                Chistoforos Kolomvos
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-asstucourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ruby</td>
+                            <td>CB-11</td>
+                            <td>Part Time</td>
+                            <td>
+                                Build A Website<br />
+                                Decode the Morse code
+                            </td>
+                            <td>
+                                Chistoforos Kolomvos<br />
+                                Apostolos Perikleous
+                            </td>
+                            <td>
+                                <a class="btn btn-light" href="HTML/Edit Data.html#edit-asstucourse">Edit</a>
+                                <a class="btn btn-light" href="HTML/Delete.html">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!--End Add Ass/Stu/Course Section-->
+    <!-- About Section -->
+    <section id="about">
+        <div class="about container">
+            <div class="col-left">
+                <div class="about-img">
+                    <img src="Assets/me.jpg" alt="image of Niki">
+                </div>
+            </div>
+            <div class="col-right">
+                <h1 class="section-title">About <span>Niki's Coding School</span></h1>
+                <h2>Our Goals</h2>
+                <p>
+                    Hi, my name is Niki and me and my team created a school that will help students learn how to code.
+                    Our goal is to create a helpful and happy environment where our students can floorish.
+                    With our top-educated trainers and the high-end technological supplies we invite you to join us in our vision
+                    <h3>Let's create a better coding world!</h3>
+                </p>
+                <a href="Index.html#hero" class="cta">Download Resume</a>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact container">
+            <div><h1 class="section-title">Contact <span>Info</span></h1></div>
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/ultraviolet/40/000000/phone.png" alt="phone image" /></div>
+                    <div class="contact-info">
+                        <h1>Phone</h1>
+                        <h2>+1 234 123 1234</h2>
+                        <h2>+1 234 123 1234</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/external-itim2101-blue-itim2101/64/000000/external-email-digital-marketing-itim2101-blue-itim2101.png" alt="email image" /></div>
+                    <div class="contact-info">
+                        <h1>Email</h1>
+                        <h2>nikiscodingschool@gmail.com</h2>
+                        <h2>abcd@gmail.com</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/ultraviolet/40/000000/address.png" alt="phone image" /></div>
+                    <div class="contact-info">
+                        <h1>Address</h1>
+                        <h2>Athens</h2>
+                        <h2>Athens</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+    <!-- Footer -->
+    <section id="footer">
+        <div class="footer container">
+            <div class="brand"><h1><span>N</span>iki's <span>C</span>oding <span>School</span></h1></div>
+            <h2>Become A Coder Now</h2>
+            <div class="social-icon">
+                <div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/office/16/000000/facebook-new.png" alt="Facebook logo" /></a>
+                </div>
+                <!--<div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/ultraviolet/40/000000/instagram-new.png" alt="Instagram logo" /></a>
+                </div>-->
+                <div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/officel/16/000000/twitter.png" alt="Twitter logo" /></a>
+                </div>
+            </div>
+            <p>Copyright © 2021 "Niki's Coding School". All rights reserved</p>
+        </div>
+    </section>
+    <!-- End Footer -->
+    <script src="Scripts/app.js"></script>
+</body>
+</html>
